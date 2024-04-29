@@ -1,5 +1,5 @@
 {% set name = "wassima" %}
-{% set version = "1.1.0" %}
+{% set version = "1.1.1" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/wassima-{{ version }}.tar.gz
-  sha256: 0ae03025ec07c0491e2d1a499d404eb66180c226f403451042190294f6ec7f06
+  sha256: b673f31051fd1b9292bd6e05853016b401ac703c377a7d0657242eb41ce6121b
 
 build:
   skip: true  # [py<37]
@@ -19,6 +19,7 @@ build:
 requirements:
   build:
     - {{ compiler('c') }}
+    - {{ stdlib("c") }}
     - {{ compiler('rust') }}
 
     - cargo-bundle-licenses  # To bundle cargo licenses
@@ -29,7 +30,6 @@ requirements:
   run:
     - python
 
-    - __osx >={{ MACOSX_DEPLOYMENT_TARGET|default("10.9") }}  # [osx and x86_64]
 
 test:
   imports:
