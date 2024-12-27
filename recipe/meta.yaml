@@ -1,5 +1,5 @@
 {% set name = "wassima" %}
-{% set version = "1.1.5" %}
+{% set version = "1.1.6" %}
 
 package:
   name: {{ name|lower }}
@@ -7,14 +7,14 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/wassima-{{ version }}.tar.gz
-  sha256: ba42c785d95fc5a7fde2124d8c8309e3fc0f048d2b660f4b3cf54eee73ba84b1
+  sha256: 4c9e88213a5cd8fc6db56117627fb8b89499478e63e75fe07c627bf55af6501c
 
 build:
   skip: true  # [py<37]
   script:
     - cargo-bundle-licenses --format yaml --output THIRDPARTY.yml
     - {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
-  number: 1
+  number: 0
 
 requirements:
   build:
