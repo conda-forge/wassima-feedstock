@@ -1,5 +1,5 @@
 {% set name = "wassima" %}
-{% set version = "1.2.2" %}
+{% set version = "2.0.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/wassima-{{ version }}.tar.gz
-  sha256: f264827618400ebeab16708c8acf7870f693b03bfb4d7e95253eb9b35074db5c
+  sha256: 9d0dd4d7f8cdc1247518daf72b656f77f87a870861aeda73e32a43e583202ae6
 
 build:
   skip: true  # [py<37]
