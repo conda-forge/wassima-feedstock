@@ -30,7 +30,9 @@ tests:
       imports:
         - wassima
       pip_check: true
-      python_version: ${{ python_min }}.*
+      python_version:
+        - ${{ python_min }}.*
+        - "*"
 
 about:
   summary: Access your OS root certificates with the atmost ease
