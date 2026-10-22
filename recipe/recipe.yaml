@@ -2,7 +2,7 @@ schema_version: 1
 
 context:
   name: wassima
-  version: "2.1.4"
+  version: "2.1.5"
 
 package:
   name: ${{ name|lower }}
@@ -10,7 +10,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/${{ name[0] }}/${{ name }}/wassima-${{ version }}.tar.gz
-  sha256: 21bb77253bb8032c05393172c4d2df395f423b7e704538f3b2407f50c032034d
+  sha256: b02c1985e527c9539396cc85b909857d810dafaaa318a30266e585a0e7135f54
 
 build:
   number: 0
